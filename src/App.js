@@ -22,7 +22,8 @@ function App() {
   };
 
   useEffect(() => {
-    fetchFact(); 
+    fetchFact(); // Fetch fact on load
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
