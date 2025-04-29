@@ -11,7 +11,7 @@ function App() {
   const fetchFact = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://127.0.0.1:5000/fact");
+      const response = await axios.get("https://random-fact-be.onrender.com/fact");
       setFact(response.data.fact);
       setImageUrl(response.data.image_url);
       console.log(imageUrl)
