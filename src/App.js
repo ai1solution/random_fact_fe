@@ -1,20 +1,18 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
-// import AdBanner from "./AdBanner";
 
 function App() {
   const [fact, setFact] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
   const [loading, setLoading] = useState(false);
+  const [count, setCount] = useState(0);
 
   const fetchFact = async () => {
     setLoading(true);
+    setCount(count+1);
     try {
       const response = await axios.get("https://random-fact-be.onrender.com/fact");
       setFact(response.data.fact);
-      setImageUrl(response.data.image_url);
-      console.log(imageUrl)
     } catch (error) {
       console.error("Error fetching fact:", error);
     }
@@ -30,19 +28,14 @@ function App() {
     <div className="App">
       <h1>🧠 Random Fact of the Day</h1>
 
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <>
-          <img src={imageUrl} alt="Random Fact" style={{ width: "400px", height: "300px", objectFit: "cover", borderRadius: "10px" }} />
+      <img src="/images/home_bg.png" alt="Random Fact" style={{ maxWidth: "70%", objectFit: "cover", borderRadius: "10px" }} />
           <p style={{ marginTop: "20px", fontSize: "1.2rem" }}>{fact}</p>
-        </>
-      )}
+      {loading && <p>Loading...</p>}
 
       <button onClick={fetchFact} style={{ marginTop: "20px", padding: "10px 20px", fontSize: "1rem", cursor: "pointer" }}>
         🔄 New Fact
       </button>
-      {/* <AdBanner /> */}
+      <p style={{ marginTop: "20px", fontSize: "1.2rem" }}>🚀 {count} fact{count>1 && "s"} down — keep levelling up!</p>
     </div>
   );
 }
