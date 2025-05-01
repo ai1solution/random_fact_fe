@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
+import AdSense from 'react-adsense';
 
 function App() {
   const [fact, setFact] = useState("");
@@ -36,6 +37,13 @@ function App() {
         🔄 New Fact
       </button>
       <p style={{ marginTop: "20px", fontSize: "1.2rem" }}>🚀 {count} fact{count>1 && "s"} down — keep levelling up!</p>
+      <AdSense.Google
+        client="ca-pub-3640737521870113" // Replace with your AdSense publisher ID
+        slot="3449071631"                // Replace with your ad slot ID
+        style={{ display: 'block' }}
+        format="auto"
+        responsive="true"
+      />
     </div>
   );
 }
