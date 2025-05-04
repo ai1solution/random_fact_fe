@@ -17,25 +17,24 @@ button:hover {
   background-color: #45a049;
 }
 
-main-image { 
+.main-image { 
   max-width: "70%";
   object-fit: "cover";
   border-radius: "10px";
 }
 
-fact-text {
+.fact-text {
   margin-top: "20px";
   font-size: "1.2rem";
 }
 
-button-fact {
+.button-fact {
   margin-top: "20px";
-  padding: "10px 20px";
   font-size: "1rem";
   cursor: "pointer";
 }
 
-fact-count-text {
+.fact-count-text {
   margin-top: "20px";
   font-size: "1.2rem";
 }
