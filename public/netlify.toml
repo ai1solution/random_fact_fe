@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "http://randomfactgeek.netlify.app/*"
+  to = "https://randomfactgeek.netlify.app/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.randomfactgeek.netlify.app/*"
+  to = "https://randomfactgeek.netlify.app/:splat"
+  status = 301
+  force = true
