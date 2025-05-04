@@ -16,25 +16,3 @@ button {
 button:hover {
   background-color: #45a049;
 }
-
-.main-image { 
-  max-width: "70%";
-  object-fit: "cover";
-  border-radius: "10px";
-}
-
-.fact-text {
-  margin-top: "20px";
-  font-size: "1.2rem";
-}
-
-.button-fact {
-  margin-top: "20px";
-  font-size: "1rem";
-  cursor: "pointer";
-}
-
-.fact-count-text {
-  margin-top: "20px";
-  font-size: "1.2rem";
-}
