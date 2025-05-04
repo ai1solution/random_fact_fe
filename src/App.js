@@ -28,14 +28,14 @@ function App() {
     <div className="App">
       <h1>🧠 Random Fact of the Day</h1>
 
-      <img src="/images/home_bg.png" alt="Random Fact" style={{ maxWidth: "70%", objectFit: "cover", borderRadius: "10px" }} />
-          <p style={{ marginTop: "20px", fontSize: "1.2rem" }}>{fact}</p>
+      <img src="/images/home_bg.png" alt="Random Fact" className="main-image" />
+          <p className="fact-text">{fact}</p>
       {loading && <p>Loading...</p>}
 
-      <button onClick={fetchFact} style={{ marginTop: "20px", padding: "10px 20px", fontSize: "1rem", cursor: "pointer" }}>
+      <button onClick={fetchFact} className="button-fact">
         🔄 New Fact
       </button>
-      <p style={{ marginTop: "20px", fontSize: "1.2rem" }}>🚀 {count} fact{count>1 && "s"} down — keep levelling up!</p>
+      <p className="fact-count-text">🚀 {count} fact{count>1 && "s"} down — keep levelling up!</p>
   
     </div>
   );
