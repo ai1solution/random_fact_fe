@@ -19,8 +19,12 @@ function App() {
     setLoading(false);
   };
 
+  // axios.post("http://localhost:5000/api/log-impression", {
+  //   adType: "monetag",
+  // });
+
   useEffect(() => {
-    fetch("http://localhost:5000/api/log-impression", {
+    fetch("https://random-fact-be.onrender.com/fact/api/log-impression", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ adType: "monetag" }),
