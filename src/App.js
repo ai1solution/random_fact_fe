@@ -24,7 +24,7 @@ function App() {
   // });
 
   useEffect(() => {
-    fetch("https://random-fact-be.onrender.com/fact/api/log-impression", {
+    fetch("https://random-fact-be.onrender.com/api/log-impression", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ adType: "monetag" }),
