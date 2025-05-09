@@ -20,6 +20,14 @@ function App() {
   };
 
   useEffect(() => {
+    fetch("http://localhost:5000/api/log-impression", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ adType: "monetag" }),
+    });
+  }, []);
+
+  useEffect(() => {
     fetchFact(); // Fetch fact on load
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
