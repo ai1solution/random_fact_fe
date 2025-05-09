@@ -25,9 +25,6 @@ function App() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ adType: "monetag" }),
     });
-  }, []);
-
-  useEffect(() => {
     fetchFact(); // Fetch fact on load
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
